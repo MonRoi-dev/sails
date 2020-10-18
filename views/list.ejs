@@ -1,0 +1,21 @@
+<table>
+  <thead>
+    <tr>
+        <th>Todo</th>       
+        <th>Item Price</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% todos.forEach(function(todo){ %>
+    <tr>
+      <td><%= todo.title %></td>
+      <td>
+        <form action="/todos/destroy/<%= todo.id %> " method="delete">
+          <button class="btn red" type="submit">Delete</button>
+        </form>
+      </td>
+    </tr>
+    <% }) %>
+  </tbody>
+</table>
